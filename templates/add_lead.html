@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Lead - Newleads Daily</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        form {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px 0;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        .checkbox-group {
+            margin: 15px 0;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+            display: block;
+            margin-top: 15px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .checkbox-list {
+            margin-left: 20px;
+        }
+        .checkbox-list div {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add New Lead</h1>
+    <form method="POST">
+        <label>Name (required):</label>
+        <input type="text" name="name" required>
+        
+        <label>Phone:</label>
+        <input type="tel" name="phone">
+        
+        <label>Email:</label>
+        <input type="email" name="email">
+        
+        <label>Address:</label>
+        <input type="text" name="address">
+        
+        <label>Latitude (required):</label>
+        <input type="number" name="lat" step="0.00001" required>
+        
+        <label>Longitude (required):</label>
+        <input type="number" name="lng" step="0.00001" required>
+        
+        <div class="checkbox-group">
+            <label>Services (check all that apply):</label>
+            <div class="checkbox-list">
+                <div>
+                    <input type="checkbox" name="is_handyman" id="handyman">
+                    <label for="handyman" style="display:inline; font-weight:normal;">Handyman</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="is_starlink" id="starlink">
+                    <label for="starlink" style="display:inline; font-weight:normal;">Starlink Installer</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="is_smarthome" id="smarthome">
+                    <label for="smarthome" style="display:inline; font-weight:normal;">Smart Home Expert</label>
+                </div>
+            </div>
+        </div>
+        
+        <button type="submit">Add Lead</button>
+    </form>
+    
+    <a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>
