@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Settings - Newleads Daily</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 100px auto;
+            padding: 20px;
+        }
+        form {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px 0;
+            font-weight: bold;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        .checkbox-group {
+            margin: 15px 0;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+            display: block;
+            margin-top: 15px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Settings</h1>
+    <form method="POST">
+        <label>Max Search Radius (km):</label>
+        <input type="number" name="max_radius_km" value="{{ user.max_radius_km }}" min="1" max="300" required>
+        
+        <div class="checkbox-group">
+            <label>Services:</label>
+            <div>
+                <input type="checkbox" name="is_handyman" {% if user.is_handyman %}checked{% endif %} id="handyman">
+                <label for="handyman" style="display:inline; font-weight:normal;">Handyman</label>
+            </div>
+            <div>
+                <input type="checkbox" name="is_starlink" {% if user.is_starlink %}checked{% endif %} id="starlink">
+                <label for="starlink" style="display:inline; font-weight:normal;">Starlink Installer</label>
+            </div>
+            <div>
+                <input type="checkbox" name="is_smarthome" {% if user.is_smarthome %}checked{% endif %} id="smarthome">
+                <label for="smarthome" style="display:inline; font-weight:normal;">Smart Home Expert</label>
+            </div>
+        </div>
+        
+        <button type="submit">Save Settings</button>
+    </form>
+    
+    <a href="/dashboard">Back to Dashboard</a>
+    <a href="/logout">Logout</a>
+</body>
+</html>
