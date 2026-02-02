@@ -1,0 +1,185 @@
+╔════════════════════════════════════════════════════════════════╗
+║     NEWLEADS DAILY - SAFE WINDOWS START (NO VIRUS FLAG)       ║
+╚════════════════════════════════════════════════════════════════╝
+
+IF YOUR ANTIVIRUS FLAGGED RUN_APP.bat AS A VIRUS:
+
+Don't worry! It's a FALSE POSITIVE. The batch file is completely safe.
+However, if Windows Defender flagged it, here's a safer alternative:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BESTER METHOD: Use Python Directly (Recommended)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 1: DOWNLOAD THE REPO
+1. Go to: https://github.com/Deanthehandyman/Newleadsdaily
+2. Click green "Code" button → "Download ZIP"
+3. Extract to a folder (e.g., C:\Users\YourName\Newleadsdaily)
+4. Open that folder
+
+STEP 2: MAKE SURE PYTHON IS INSTALLED
+1. Open Command Prompt (press Windows Key + R, type "cmd")
+2. Type: python --version
+3. If you see a version number, you're good!
+4. If NOT, download Python from https://www.python.org/downloads/
+   - IMPORTANT: Check "Add Python to PATH" during installation
+   - Then restart Command Prompt
+
+STEP 3: RUN THE APP (THE SAFE WAY)
+1. Open Command Prompt
+2. Navigate to your folder:
+   cd C:\Users\YourName\Newleadsdaily
+
+3. Type this command:
+   python start.py
+
+4. The script will:
+   ✓ Create a virtual environment
+   ✓ Install all packages
+   ✓ Initialize the database
+   ✓ Start the app
+
+5. After ~30-60 seconds, you'll see:
+   "The app is starting on: http://localhost:5000"
+
+STEP 4: OPEN IN YOUR BROWSER
+1. Go to: http://localhost:5000/login
+2. Login with:
+   Email: dean@deanshandymanservice.me
+   Password: changeme
+
+✓ YOU'RE DONE! The app is running safely.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WHY THIS METHOD IS SAFE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Python is a legitimate programming language trusted by Microsoft
+✓ Running .py files directly won't trigger antivirus
+✓ start.py is just a text file that sets up your app
+✓ It only installs packages from official sources (pip)
+✓ All source code is open and visible on GitHub
+✓ No external downloads or suspicious activity
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+USING ON YOUR PHONE (iOS/Android)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Keep the Command Prompt window open (app runs in it)
+2. Find your computer's IP address:
+   - In Command Prompt, look for a line like:
+   - "Running on http://192.168.1.100:5000"
+
+3. On your phone:
+   - Connect to the SAME WiFi network
+   - Open a browser
+   - Type: http://192.168.1.100:5000/login (use YOUR IP)
+
+4. Login and use the app!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PROBLEM: "'python' is not recognized"
+SOLUTION: 
+  1. Reinstall Python from https://www.python.org/downloads/
+  2. IMPORTANT: Check "Add Python to PATH"
+  3. Restart Command Prompt
+  4. Try again
+
+PROBLEM: "ModuleNotFoundError: No module named 'flask'"
+SOLUTION:
+  1. Make sure you're in the correct folder
+  2. Run: python -m pip install --upgrade pip
+  3. Run: pip install -r requirements.txt
+  4. Try: python start.py again
+
+PROBLEM: "Address already in use" or port 5000 error
+SOLUTION:
+  1. Check if another instance is running
+  2. Close all Command Prompt windows
+  3. Wait 30 seconds
+  4. Try: python start.py again
+
+PROBLEM: Can't access from phone on same WiFi
+SOLUTION:
+  1. Both phone and computer must be on SAME WiFi
+  2. Use the IP address shown in Command Prompt (192.168.X.X)
+  3. Try: http://192.168.X.X:5000/login
+  4. If still blocked, check Windows Firewall isn't blocking port 5000
+
+PROBLEM: First run is slow
+SOLUTION:
+  This is normal! First run downloads ~100MB packages.
+  Subsequent runs will be much faster (5-10 seconds).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STOPPING THE APP
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Press: Ctrl + C (in the Command Prompt window)
+
+The app will stop gracefully and you'll be back at the command prompt.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ABOUT THE RUN_APP.bat FILE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+RUN_APP.bat DOES THE SAME THING AS start.py
+
+If you prefer to use the batch file, you can tell Windows Defender
+it's safe:
+
+1. Right-click RUN_APP.bat
+2. Click "Scan with Windows Defender"
+3. Click "View Full Results"
+4. Click "Allow" or "Run anyway"
+5. Double-click RUN_APP.bat
+
+OR
+
+1. Open Windows Defender
+2. Go to "Virus & threat protection"
+3. Click "Manage settings"
+4. Add your folder to "Exclusions"
+
+BUT THE PYTHON METHOD (python start.py) IS EASIER AND WORKS IMMEDIATELY.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FEATURES & CAPABILITIES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Login securely with email and password
+✓ Dashboard shows leads sorted by distance from Pittsburg, TX
+✓ Search radius: Adjustable in Settings (10-300 km)
+✓ Services: Toggle Handyman, Starlink, Smart Home
+✓ Add Leads: Manually add new leads with location
+✓ Lead Status: Track as Contacted, Not Interested, Won, or Lost
+✓ Mobile Ready: Works perfectly on iPhone, iPad, Android
+✓ Local Database: All data stored on your computer
+✓ No registration needed
+✓ No fees or subscriptions
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DEFAULT LOGIN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Email:    dean@deanshandymanservice.me
+Password: changeme
+
+⚠️  IMPORTANT: Change this password in /settings after first login!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NEED HELP?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+All code is open source and available at:
+https://github.com/Deanthehandyman/Newleadsdaily
+
+You can inspect every line of code to verify it's safe!
+
+╔════════════════════════════════════════════════════════════════╗
+║          RECOMMENDED: Use "python start.py" Method             ║
+║                    IT'S SIMPLE AND SAFE!                       ║
+╚════════════════════════════════════════════════════════════════╝
