@@ -1,0 +1,105 @@
+╔════════════════════════════════════════════════════════════════╗
+║          NEWLEADS DAILY - WINDOWS QUICK START GUIDE            ║
+╚════════════════════════════════════════════════════════════════╝
+
+FOR THE FASTEST START, FOLLOW THESE 3 SIMPLE STEPS:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 1: DOWNLOAD & EXTRACT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Go to: https://github.com/Deanthehandyman/Newleadsdaily
+2. Click GREEN "Code" button → "Download ZIP"
+3. Extract to a folder (e.g., C:\Newleadsdaily)
+4. Open that folder in File Explorer
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 2: RUN THE APP
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Double-click: RUN_APP.bat
+   (A black window will open and do everything automatically)
+2. Wait 30-60 seconds for setup
+3. You'll see: "Starting app on http://localhost:5000"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 3: OPEN IN BROWSER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Open Chrome, Edge, or Firefox
+2. Go to: http://localhost:5000/login
+3. Login with:
+   Email: dean@deanshandymanservice.me
+   Password: changeme
+
+✓ YOU'RE DONE! The app is now running.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+USING ON YOUR PHONE (iOS/Android)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Make sure phone is on the SAME WiFi as your computer
+2. In the Command Prompt window (where RUN_APP.bat is running),
+   look for a line like:
+   "Running on http://192.168.X.X:5000"
+3. Copy that IP address
+4. On your phone, open a browser and paste that address
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+IMPORTANT NOTES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• Do NOT close the black Command Prompt window while using the app
+  (The app runs inside it)
+
+• To stop the app: Press Ctrl+C in the Command Prompt window
+
+• First run will download ~100MB of Python packages (takes 1-2 mins)
+
+• After first run, future starts will be much faster (5-10 seconds)
+
+• Database file "newleadsdaily.db" is created automatically
+  (Your data is stored locally on your computer)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PROBLEM: "'python' is not recognized"
+SOLUTION: Reinstall Python from python.org
+          IMPORTANT: Check "Add Python to PATH" during install
+
+PROBLEM: Cannot open http://localhost:5000
+SOLUTION: Make sure RUN_APP.bat is still running
+          Try waiting another 30 seconds
+          Try a different browser
+
+PROBLEM: Can't access from phone on same WiFi
+SOLUTION: Check phone and computer are on SAME WiFi network
+          Try the IP address from the Command Prompt (192.168.X.X)
+          Windows Firewall may be blocking port 5000
+
+PROBLEM: App crashes or won't start
+SOLUTION: Delete the "venv" folder and "newleadsdaily.db" file
+          Run RUN_APP.bat again (it will rebuild everything)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+APP FEATURES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Dashboard: View leads sorted by distance from Pittsburg, TX
+✓ Settings: Change search radius and service types
+✓ Add Lead: Manually add new leads with location
+✓ Mobile Ready: Works great on phones and tablets
+✓ Local Database: All data stays on your computer
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NEED HELP?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+See SETUP.md for detailed instructions
+All code is available at: https://github.com/Deanthehandyman/Newleadsdaily
+
+╔════════════════════════════════════════════════════════════════╗
+║                    HAPPY LEAD HUNTING! 🎯                       ║
+╚════════════════════════════════════════════════════════════════╝
