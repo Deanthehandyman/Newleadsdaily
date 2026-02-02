@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - Newleads Daily</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .lead-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .lead-header {
+            display: flex;
+            justify-content: space-between;
+        }
+        .distance {
+            color: #666;
+            font-size: 14px;
+        }
+        .tags {
+            margin: 10px 0;
+            color: #007bff;
+            font-size: 12px;
+        }
+        .contact-info {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        .buttons {
+            margin-top: 10px;
+        }
+        button {
+            padding: 5px 10px;
+            margin-right: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 3px;
+        }
+        .btn-contacted {
+            background-color: #28a745;
+            color: white;
+        }
+        .btn-interested {
+            background-color: #17a2b8;
+            color: white;
+        }
+        .btn-not-interested {
+            background-color: #dc3545;
+            color: white;
+        }
+        .btn-won {
+            background-color: #ffc107;
+            color: black;
+        }
+        .btn-lost {
+            background-color: #6c757d;
+            color: white;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        nav {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Dashboard</h1>
+        <nav>
+            <a href="/settings">Settings</a> | <a href="/admin/add-lead">Add Lead</a> | <a href="/logout">Logout</a>
+        </nav>
+    </div>
+    
+    {% if leads %}
+        <p>Found {{ leads|length }} leads:</p>
+        {% for lead, distance in leads %}
+            <div class="lead-card">
+                <div class="lead-header">
+                    <h3>{{ lead.name }}</h3>
+                    <span class="distance">{{ "%.1f" | format(distance) }} km away</span>
+                </div>
+                <div class="tags">
+                    {% if lead.is_handyman %}Handyman{% endif %}
+                    {% if lead.is_starlink %}Starlink{% endif %}
+                    {% if lead.is_smarthome %}Smart Home{% endif %}
+                </div>
+                <div class="contact-info">
+                    <strong>Phone:</strong> {{ lead.phone }}<br>
+                    <strong>Email:</strong> {{ lead.email }}<br>
+                    <strong>Address:</strong> {{ lead.address }}
+                </div>
+                <div class="buttons">
+                    <form method="POST" action="/lead/{{ lead.id }}/status" style="display:inline">
+                        <input type="hidden" name="status" value="contacted">
+                        <button class="btn-contacted" type="submit">Contacted</button>
+                    </form>
+                    <form method="POST" action="/lead/{{ lead.id }}/status" style="display:inline">
+                        <input type="hidden" name="status" value="not_interested">
+                        <button class="btn-not-interested" type="submit">Not Interested</button>
+                    </form>
+                    <form method="POST" action="/lead/{{ lead.id }}/status" style="display:inline">
+                        <input type="hidden" name="status" value="won">
+                        <button class="btn-won" type="submit">Won</button>
+                    </form>
+                    <form method="POST" action="/lead/{{ lead.id }}/status" style="display:inline">
+                        <input type="hidden" name="status" value="lost">
+                        <button class="btn-lost" type="submit">Lost</button>
+                    </form>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No leads available right now.</p>
+    {% endif %}
+</body>
+</html>
